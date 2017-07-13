@@ -22,4 +22,35 @@ $(function(){
 	
 	// To show it is dynamic html text
 	jQuery('.in-slide-content').delay(1200).fadeIn();
+
+	getLocation();
+
+	$('#section1').click(function() {
+		console.log("section 1 clicked: " + $('#section1answer').val());
+		var answer = $('#section1answer').val();
+		$.ajax({
+			type: "POST",
+			url: 'processAnswer.php',
+			data: {'section': 1, 'answer': answer},
+			success: function(data) {
+				console.log(data);
+				if (data == 'juist') {
+					$('#maximage').cycle('next');
+				}
+			}
+		});
+	});
+
 });
+
+function getLocation() {
+	navigator.geolocation.getCurrentPosition(handle_geolocation_query);
+	setTimeout(function() {
+		getLocation();
+	}, 5000);
+}
+
+function handle_geolocation_query(position){
+    //console.log('Lat: ' + position.coords.latitude + ' ' +
+    //      'Lon: ' + position.coords.longitude);
+}

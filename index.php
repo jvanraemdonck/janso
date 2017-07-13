@@ -10,24 +10,15 @@
     
     <link rel="stylesheet" href="css/jquery.maximage.css" type="text/css" media="screen" title="CSS" charset="utf-8" />
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    <a href="" id="arrow_left">
-        <img src="images/arrow_left.png" alt="Slide Left">
-    </a>
-    <a href="" id="arrow_right">
-        <img src="images/arrow_right.png" alt="Slide Right">
-    </a>
     
     <div id="maximage">
         <div>
             <img src="images/1.JPG" alt="" width="1400" height="1050" />
-            <h1>Gent</h1>
+            <input type="text" name="section1" id="section1answer">
+            <input type="submit" name="submit" value="proberen!" id="section1">
         </div>
         <div>
             <img src="images/2.JPG" alt="" width="1400" height="1050" />
