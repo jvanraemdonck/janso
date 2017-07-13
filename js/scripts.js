@@ -14,7 +14,7 @@ $(function(){
 			jQuery('#maximage').fadeIn('fast');
 		},
 		// cssBackgroundSize might be causing choppiness in retina display safari
-		cssBackgroundSize: false 
+		cssBackgroundSize: true 
 	});
 	
 	// Helper function to Fill and Center the HTML5 Video
